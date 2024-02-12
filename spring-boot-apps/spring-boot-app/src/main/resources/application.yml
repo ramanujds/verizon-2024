@@ -4,13 +4,13 @@ server:
 
 spring:
  
-  profiles:
-    active: test
+#  profiles:
+#    active: test
  
   datasource:
-    url: jdbc:mysql://localhost:3306/verizon_db
-    username: root
-    password: password
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:verizon_db}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:password}
   
     
   jpa:
