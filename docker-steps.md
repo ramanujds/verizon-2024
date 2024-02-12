@@ -4,6 +4,14 @@
 
 ## Use environment variables for MySQL properties 
 
+## Create the jar file
+
+```bash
+
+mvn clean package
+
+```
+
 ## Create a Dockerfile
 
 ```Dockerfile
