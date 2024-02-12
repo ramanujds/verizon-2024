@@ -4,15 +4,18 @@
 
 ## Use environment variables for MySQL properties 
 
-## Create the jar file
 
-```bash
+## Creating Docker image
 
-mvn clean package
+## Method 1 :  
 
-```
+run as maven build spring-boot:build-image
 
-## Create a Dockerfile
+## Method 2
+
+### Create the jar file
+
+### Create a Dockerfile
 
 ```Dockerfile
 
@@ -24,7 +27,7 @@ CMD java -jar app.jar
 ```
 
 
-## Build the image
+### Build the image
 
 ```bash
 docker build -t spring-boot-app .
