@@ -1,5 +1,0 @@
-package com.vz.app.repository;
-
-public interface TraineeRepository {
-
-}
