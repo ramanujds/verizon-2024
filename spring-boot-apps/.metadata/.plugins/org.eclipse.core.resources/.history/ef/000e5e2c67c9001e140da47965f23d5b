@@ -1,0 +1,39 @@
+package com.vz.app.service;
+
+import java.util.List;
+
+import com.vz.app.model.Trainee;
+
+public class TraineeServiceImpl implements TraineeService {
+
+	@Override
+	public List<Trainee> getAllTrainees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Trainee saveTrainee(Trainee trainee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Trainee findTrainee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Trainee updateTrainee(Trainee trainee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteTrainee(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

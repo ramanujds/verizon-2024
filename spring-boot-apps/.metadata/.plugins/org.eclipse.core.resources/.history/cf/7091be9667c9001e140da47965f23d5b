@@ -1,0 +1,50 @@
+package com.vz.app.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.vz.app.model.Trainee;
+import com.vz.app.repository.TraineeRepository;
+
+public class TraineeServiceImpl implements TraineeService {
+	
+	
+	private TraineeRepository repository;
+	
+	@Autowired
+	public TraineeServiceImpl(TraineeRepository repository) {
+		this.repository = repository;
+	}
+
+	@Override
+	public List<Trainee> getAllTrainees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Trainee saveTrainee(Trainee trainee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Trainee findTrainee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Trainee updateTrainee(Trainee trainee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteTrainee(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
