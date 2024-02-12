@@ -1,5 +1,31 @@
+## Running a Spring Boot Application with MySql on Docker
+
+## Create a Spring Boot Application
+
+## Use environment variables for MySQL properties 
+
+## Create a Dockerfile
+
+```Dockerfile
+
+FROM openjdk:17-jdk-slim
+WORKDIR /
+ADD target/spring-boot-app.jar app.jar
+CMD java -jar app.jar
+
+```
+
+
+## Build the image
+
+```bash
+docker build -t spring-boot-app .
+
+```
+
 
 ## Creating a network :
+
 ```bash
 docker network create verizon-net
 ```
