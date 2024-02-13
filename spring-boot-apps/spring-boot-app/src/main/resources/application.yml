@@ -1,11 +1,11 @@
 server:
-  port: 8000
+  port: 5000
 
 
 spring:
  
-#  profiles:
-#    active: test
+  profiles:
+    active: test
  
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:verizon_db}

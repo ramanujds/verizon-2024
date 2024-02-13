@@ -1,0 +1,25 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: api-gateway-server
+
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri:
+            lb://product-service
+          predicates:
+            - Path=/api/products/**
+
+        - id: cart-service
+          uri:
+            lb://cart-service
+          predicates:
+            - Path=/api/cart/**
+
+
+
+
