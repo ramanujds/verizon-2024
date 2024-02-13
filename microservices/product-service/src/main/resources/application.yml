@@ -1,6 +1,13 @@
 server:
   port: 5100
 
+# eureka configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+  instance:
+    prefer-ip-address: true
 
 ## Database Configuration for h2
 
