@@ -1,0 +1,50 @@
+version: '3.7'
+services:
+
+  eureka-server:
+    image: eureka-server:0.0.1-SNAPSHOT
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - microservices-network
+
+  product-service:
+    image: product-service:0.0.1-SNAPSHOT
+    ports:
+     -  "5100-5199:5100"
+    restart: always
+    depends_on:
+      -  eureka-server
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_HOST=eureka-server
+
+  cart-service:
+    image: cart-service:0.0.1-SNAPSHOT
+    ports:
+     -  "5200-5299:5200"
+    restart: always
+    depends_on:
+      -  eureka-server
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_HOST=eureka-server
+
+  api-gateway:
+    image: api-gateway:0.0.1-SNAPSHOT
+    ports:
+     -  "5555:5555"
+    restart: always
+    depends_on:
+      -  eureka-server
+    networks:
+      - microservices-network
+    environment:
+      - EUREKA_HOST=eureka-server
+  
+
+networks:
+  microservices-network:

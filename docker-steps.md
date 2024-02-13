@@ -56,4 +56,18 @@ docker run -p 8000:8000 --network verizon-net --name spring-boot-app -e MYSQL_HO
 
 
 
+## Image Names
+
+product-service:0.0.1-SNAPSHOT
+
+cart-service:0.0.1-SNAPSHOT
+
+api-gateway:0.0.1-SNAPSHOT
+
+eureka-server:0.0.1-SNAPSHOT
+
+
+
+
+
 
