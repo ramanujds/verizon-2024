@@ -2,6 +2,7 @@ package com.vz.app.service;
 
 import java.util.List;
 
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,9 +10,12 @@ import com.vz.app.model.Trainee;
 import com.vz.app.repository.TraineeRepository;
 
 @Service
+@Setter
 public class TraineeServiceImpl implements TraineeService {
 	
 	private TraineeRepository repository;
+
+
 	
 	@Autowired
 	public TraineeServiceImpl(TraineeRepository repository) {
