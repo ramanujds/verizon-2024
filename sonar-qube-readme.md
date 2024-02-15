@@ -49,7 +49,7 @@ Steps :
 		<dependency>
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.6</version>
+			<version>0.8.8</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
