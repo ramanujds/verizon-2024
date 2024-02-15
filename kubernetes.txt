@@ -1,0 +1,45 @@
+How to start minikube?
+
+minikube start
+
+docker pull ram1uj/covid-info
+
+Create a deployement in kubernetes
+
+kubectl create deployment covid-info-deployment --image=ram1uj/covid-info
+
+kubectl get deployments
+
+kubectl get pods
+
+Delete a deployment
+
+kubectl delete deployment covid-info-deployment
+
+Delete all deployments
+
+kubectl delete all --all
+
+kubectl get pods
+
+Expose a deployment using nodeport
+
+kubectl expose deployment covid-info-deployment --type=NodePort --port=80
+
+
+kubectl get services
+
+Open service in browser
+
+
+minikube service covid-info-deployment
+
+delete service
+
+kubectl delete service covid-info-deployment
+
+
+
+kubectl describe service covid-info-deployment
+
+

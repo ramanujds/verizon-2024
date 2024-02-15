@@ -1,0 +1,23 @@
+apiVersion: apps/v1 
+kind: Deployment  
+metadata: 
+   name: covod-info-deployement
+
+spec:  
+  selector:
+    matchLabels:
+      app: covid-info
+
+
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: covid-info
+    spec:   
+
+      containers:
+      - name: covid-info
+        image: 'ram1uj/covid-info' 
+        ports:
+        - containerPort: 80 
