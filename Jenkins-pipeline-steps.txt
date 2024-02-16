@@ -1,0 +1,65 @@
+Jenkins Pipeline
+----------------
+
+Step 1 - Create a git repo
+Step 2 - Commit & Push code
+
+Step 3 - Create a new Item -> Pipeline
+
+Step 4 - Configure Pipeline
+
+- Select Github Project
+- Input repository url
+
+- Build Triggers 
+- GitHub hook trigger for GITScm polling
+
+- Go to Pipeline Syntax
+
+
+
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "maven-3.9.6"
+    }
+
+    stages {
+        stage('Source') {
+            steps {
+                
+               
+              checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'b1cf5d5e-fb9c-4505-a48d-028ef165406e', url: 'https://github.com/ramanujds/vrzn-app-repo']])
+            }
+        }
+            
+            stage('Build') {
+            steps {
+                
+               
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+               
+            }
+            }
+    }
+            
+
+            post {
+               
+                success {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts 'target/*.jar'
+                }
+            }
+        }
+
+
+
+
+
+
+    
+
