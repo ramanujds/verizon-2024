@@ -1,0 +1,44 @@
+Topics yet to Cover.
+
+Event handling, Integration in GUI
+JDBC - 4 Applications, Serialisation and persistence.
+
+
+HIBERNATE -
+Pagination in JPQL, Introduction to Criteria Api
+Hibernate Mappings Overview
+
+Pagination Example
+
+https://www.baeldung.com/spring-data-jpa-pagination-sorting
+
+
+
+Reactive
+Back pressure and flow contorl
+Reactive Composition, Testing Reactive Code.
+
+
+Content Negotiation, Pagination,
+JWT Authentication, Actuator, Transactions handling, Caching Zuul Gateway,
+Feign Client.
+
+
+Query query = session.crateQuery("from Trainee where id=:id");
+
+
+
+
+
+List list = new ArrayList()
+
+
+list = new LinkedList()
+
+list.add()
+
+
+JPA and Hibernate
+
+
+
