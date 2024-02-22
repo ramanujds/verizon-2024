@@ -1,6 +1,6 @@
 
-```javascript
-// Service Code
+
+### Service Code
 
 ```javascript
 const baseurl = "http://localhost:5000/users";
@@ -41,9 +41,11 @@ export const userAccessApi = async () => {
     return data;
 }
 
-// Component Level
+```
+### Component Level
 
-```jsx
+```javascript
+
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { userAccessApi, userLoginApi } from '../../apis/AuthApi';
